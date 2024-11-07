@@ -11,7 +11,6 @@
 /* CSS GLOBAL           */
 /* ==================== */
 
-/* Formatação padrão para as paginas */
 .body {
     background-color: var(--cor-bg);
     font-family: 'Arial', sans-serif;
@@ -22,50 +21,57 @@
     letter-spacing: 2px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     line-height: 1.6;
-    line-height: 1.6;
 }
 
-/* Barra Minimalista do Slogan */
 .slogan-bar {
-    background-color: var(--cor-preto); /* Fundo preto */
+    background-color: var(--cor-preto);
     padding: 10px 0;
     overflow: hidden;
-    color: var(--cor-hl); /* Cor da variável FC4100 */
+    color: var(--cor-hl);
     text-align: center;
     position: relative;
 }
 
-/* formatação para o slogan */
 .slogan-text {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll-text 20s linear infinite; /* Animação de rolagem */
+    animation: scroll-text 20s linear infinite;
     font-weight: bold;
     margin-bottom: 0px;
 }
 
-/* Animação de rolagem da direita para a esquerda */
 @keyframes scroll-text {
-    0% {
-        transform: translateX(300%);
-    }
-    100% {
-        transform: translateX(-300%);
-    }
+    0% { transform: translateX(300%); }
+    100% { transform: translateX(-300%); }
 }
 
-/* formatação do cabeçalho */
+/* ==================== */
+/* ANIMAÇÕES            */
+/* ==================== */
+
+@keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ==================== */
+/* CSS HEADER           */
+/* ==================== */
+
 header {
     background-color: var(--cor-bg);
     text-align: center;
-    /* padding: 20px 0; */
 }
 
 .img-logo {
     width: 100px;
     height: auto;
     border-radius: 50%;
-
 }
 
 nav a {
@@ -80,141 +86,110 @@ nav a:hover {
     background-color: var(--cor-hl);
     border-radius: 5px;
     padding: 5px 10px;
-    transition: color 3s;
+}
+
+header.bg-transparent { background-color: transparent; }
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* Responsividade da Navbar */
+@media (min-width: 768px) {
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-toggler { display: block; }
+    .navbar-collapse { justify-content: center; }
 }
 
 /* ==================== */
-/* ANIMAÇÕES            */
-/* ==================== */
-
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInText {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* ==================== */
-/* CSS ESPECÍFICO       */
+/* CSS MAIN/BODY        */
 /* ==================== */
 
 /* Home */
 .highlight-row {
     padding: 60px 0;
     display: flex;
-    justify-content: space-between; /* Cria espaço entre as colunas */
-    align-items: center; /* Centraliza verticalmente se as colunas tiverem tamanhos diferentes */
-    opacity: 0; /* Começa invisível */
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
     transition: opacity 1s ease-out;
 }
 
-.highlight-row.active {
-    opacity: 1; /* Torna o item visível quando a classe 'active' é adicionada */
-}
+.highlight-row.active { opacity: 1; }
 
 .highlight-image {
-    min-height: 300px; /* Altura mínima para a div da imagem */
-    display: flex; /* Para centralizar a imagem dentro da div */
-    justify-content: center; /* Centraliza horizontalmente a imagem */
-    align-items: center; /* Centraliza verticalmente a imagem */
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .highlight-image img {
-    max-width: 100%; /* A imagem se ajusta à largura da coluna */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%;
+    height: auto;
 }
 
-.highlight-content {
-    padding: 20px; /* Adiciona um pouco de espaçamento */
-}
+.highlight-content { padding: 20px; }
 
-/* Classes para animar os itens */
 .item-visible {
-    opacity: 1 !important; /* Torna o item visível */
+    opacity: 1 !important;
     animation: fadeInText 1s ease-out forwards;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
-    .highlight-image {
-        min-height: 200px; /* Ajuste a altura mínima para telas menores */
-    }
-
-    .highlight-content {
-        text-align: center; /* Centraliza o texto em dispositivos menores */
-    }
+    .highlight-image { min-height: 200px; }
+    .highlight-content { text-align: center; }
 }
 
-/* Footer */
-footer {
-    background-color: var(--cor-bg);
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+/* ==============================  */
+/* CSS CARROSSEL                   */
+/* ==============================  */
 
-footer a {
-    color: var(--cor-branca);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline; /* Adiciona um efeito de destaque */
-}
-
-/* Estilo do Carrossel */
 .carousel-inner {
-    min-height: 300px; /* Altura mínima para o carrossel, ajuste conforme necessário */
-    transition: height 1.5s ease; /* Transição suave para a altura */
+    min-height: 300px;
+    transition: height 1.5s ease;
 }
 
-/* Transição suave para os itens do carrossel */
 .carousel-item {
     transition: transform 1.5s ease;
 }
 
-/* Transição suave de fade nos itens do carrossel */
-.carousel-item-next,
-.carousel-item-prev,
-.carousel-item.active {
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
     transition: opacity 1.5s ease !important;
 }
 
-/* Ajustes nas imagens do carrossel */
-.carousel-item img {
-    object-fit: cover; /* Garante que a imagem ocupe todo o espaço do item */
+.carousel-item img { object-fit: cover; }
+
+.d-flex.justify-content-center {
+    display: flex;
+    justify-content: center;
 }
 
-/* Estilos do Cabeçalho (Navbar) */
-header.bg-transparent {
-    background-color: transparent;
+.carousel-item {
+    transition: transform 0.6s ease, opacity 0.6s ease-in-out;
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-    color: #007bff !important;
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
-/* Estilos para os Cards (Cursos) */
+/* ==============================  */
+/* CSS CARDS (Cursos)              */
+/* ==============================  */
+
 .card {
     border: none;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .card-img-top {
@@ -223,18 +198,34 @@ header.bg-transparent {
     width: 100%;
 }
 
-/* Centralização dos itens no carrossel */
-.d-flex.justify-content-center {
+.card-wrapper {
     display: flex;
-    justify-content: center;
+    gap: 20px;
 }
 
-/* Ajuste de Margem do Título da Seção */
-h2.text-center {
-    margin-bottom: 20px;
+.card-wrapper:hover .card {
+    filter: blur(5px);
+    opacity: 0.5;
 }
 
-/* Botões do carrossel */
+.card-wrapper .card:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.card-title { font-size: 1.25rem; color: #007bff; }
+.card-text { font-size: 0.9rem; color: #666; }
+
+.card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* ==============================  */
+/* BOTÕES                          */
+/* ==============================  */
+
 .btn-primary {
     background-color: var(--cor-gd2);
     border-color: var(--cor-gd2);
@@ -245,29 +236,38 @@ h2.text-center {
     border-color: var(--cor-gd1);
 }
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
 }
 
-/* Responsividade da Navbar */
-@media (min-width: 768px) {
-    .navbar-collapse {
-        justify-content: flex-end;
-    }
-}
-@media (max-width: 767px) {
-    .navbar-toggler {
-        display: block;
-    }
-    .navbar-collapse {
-        justify-content: center;
-    }
+/* ==============================  */
+/* BOTAO VOLTAR AO TOPO            */
+/* ==============================  */
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: var(--cor-gd2);
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--cor-hl);
+    font-weight: bold;
 }
 
-/* ==================== */
-/* CSS DA PÁGINA DE LOGIN */
-/* ==================== */
+#backToTop:hover { background-color: var(--cor-gd1); }
+
+#backToTop.show { display: block; }
+
+/* ==============================  */
+/* CSS DA PÁGINA DE LOGIN          */
+/* ==============================  */
 
 .icon-container {
     display: flex;
@@ -296,9 +296,7 @@ h2.text-center {
     text-align: center;
 }
 
-.login-container h2 {
-    margin-bottom: 20px;
-}
+.login-container h2 { margin-bottom: 20px; }
 
 .login-container form {
     display: flex;
@@ -322,6 +320,22 @@ h2.text-center {
     font-size: 0.9rem;
 }
 
-/* ==================== */
-/* FIM DO CSS           */
-/* ==================== */
+/* ==============================  */
+/* CSS FOOTER                      */
+/* ==============================  */
+
+footer {
+    background-color: var(--cor-bg);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: var(--cor-branca);
+    text-decoration: none;
+}
+
+footer a:hover { text-decoration: underline; }

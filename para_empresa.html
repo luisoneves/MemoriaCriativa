@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,27 @@
     <link rel="icon" href="./imagem/labskill_icon.ico" type="image/x-icon">
     <title>LabSkill</title>
 </head>
+
 <body class="body">
+    <!-- Barra de slogan -->
     <div class="slogan-bar">
         <p class="slogan-text">LabSkill: Seu Laboratório de Inovação e Criatividade!</p>
     </div>
+
+        <!-- Início do Cabeçalho com Navegação Principal -->
     <header class="bg-transparent">
         <nav class="navbar navbar-expand-md navbar-dark container">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img class="img-logo" src="./imagem/logo08.webp" alt="Logo do LabSkill">
                 </a>
+
+                <!-- Botão de colapso para navegação mobile -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Links de navegação -->
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
@@ -34,68 +43,70 @@
         </nav>
     </header>
 
+    <!--  Inicio do Conteudo da Pagina -->
     <div class="container my-5">
         <h2 class="text-center mb-4">Treinamentos e Otimização para Empresas</h2>
         <p class="text-center">Desenvolvemos soluções sob medida para empresas de todos os portes. Escolha o pacote ideal para fortalecer a equipe, melhorar os processos de trabalho e maximizar a produtividade. De pequenas startups a grandes corporações, temos a solução ideal para sua empresa!</p>
     </div>
 
-    <!-- Grid de Cards de Treinamentos -->
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <!-- Card 1 -->
-            <div class="col">
-                <div class="card h-100 text-center">
-                    <img src="./imagem/imagem018.jpg" class="card-img-top" alt="Treinamento de Liderança">
-                    <div class="card-body">
-                        <h5 class="card-title">Treinamento de Liderança</h5>
-                        <p class="card-text">Desenvolva líderes eficazes para inspirar e guiar equipes com confiança.</p>
-                        <a href="#" class="btn btn-primary">Saiba Mais</a>
-                    </div>
+<!-- Grid de Cards de Treinamentos -->
+<div class="container card-wrapper"> <!-- Adicionada a classe "card-wrapper" -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="./imagem/imagem018.jpg" class="card-img-top" alt="Treinamento de Liderança">
+                <div class="card-body">
+                    <h5 class="card-title">Treinamento de Liderança</h5>
+                    <p class="card-text">Desenvolva líderes eficazes para inspirar e guiar equipes com confiança.</p>
+                    <a href="#" class="btn btn-primary">Saiba Mais</a>
                 </div>
             </div>
-            <!-- Card 2 -->
-            <div class="col">
-                <div class="card h-100 text-center">
-                    <img src="./imagem/treinamento2.jpg" class="card-img-top" alt="Gestão de Projetos">
-                    <div class="card-body">
-                        <h5 class="card-title">Gestão de Projetos</h5>
-                        <p class="card-text">Otimize a execução de projetos com técnicas de gestão eficientes e ágeis.</p>
-                        <a href="#" class="btn btn-primary">Descubra Mais</a>
-                    </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="./imagem/treinamento2.jpg" class="card-img-top" alt="Gestão de Projetos">
+                <div class="card-body">
+                    <h5 class="card-title">Gestão de Projetos</h5>
+                    <p class="card-text">Otimize a execução de projetos com técnicas de gestão eficientes e ágeis.</p>
+                    <a href="#" class="btn btn-primary">Descubra Mais</a>
                 </div>
             </div>
-            <!-- Card 3 -->
-            <div class="col">
-                <div class="card h-100 text-center">
-                    <img src="./imagem/imagem020.jpg" class="card-img-top" alt="Treinamento em Vendas">
-                    <div class="card-body">
-                        <h5 class="card-title">Treinamento em Vendas</h5>
-                        <p class="card-text">Aprimore as habilidades de vendas de sua equipe para melhores resultados.</p>
-                        <a href="#" class="btn btn-primary">Veja Mais</a>
-                    </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="./imagem/imagem020.jpg" class="card-img-top" alt="Treinamento em Vendas">
+                <div class="card-body">
+                    <h5 class="card-title">Treinamento em Vendas</h5>
+                    <p class="card-text">Aprimore as habilidades de vendas de sua equipe para melhores resultados.</p>
+                    <a href="#" class="btn btn-primary">Veja Mais</a>
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="col">
-                <div class="card h-100 text-center">
-                    <img src="./imagem/imagem021.jpg" class="card-img-top" alt="Otimização de Processos">
-                    <div class="card-body">
-                        <h5 class="card-title">Otimização de Processos</h5>
-                        <p class="card-text">Reduza custos e aumente a eficiência com processos bem estruturados.</p>
-                        <a href="#" class="btn btn-primary">Veja Mais</a>
-                    </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col">
+            <div class="card h-100 text-center">
+                <img src="./imagem/imagem021.jpg" class="card-img-top" alt="Otimização de Processos">
+                <div class="card-body">
+                    <h5 class="card-title">Otimização de Processos</h5>
+                    <p class="card-text">Reduza custos e aumente a eficiência com processos bem estruturados.</p>
+                    <a href="#" class="btn btn-primary">Veja Mais</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Footer -->
+    <!-- Inicio do conteúdo Footer -->
     <footer class="text-center mt-4">
         @LabSkill | <a href="https://twitter.com/labskill">twitter/labskill</a> | <a href="https://instagram.com/labskill">instagram/labskill</a> | <a href="https://linkedin.com/company/labskill">linkedin/labskill</a>
         |
         Av. Paulista - nº1234 - São Paulo/SP - Brasil CEP: 12459-384 | Tel: (11) 3432-3212
     </footer>
 
+    <!-- Links para script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./script/luisotavionevesfaustino.js"></script>
 </body>
